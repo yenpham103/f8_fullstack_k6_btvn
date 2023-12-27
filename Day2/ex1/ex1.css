@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  background-color: beige;
+  width: 30%;
+  padding: 20px;
+}
+.des {
+  padding: 20px 0;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+}
+input {
+    padding: 10px;
+}
+span {
+    font-style: italic;
+}
+button {
+    padding: 10px 10px;
+    background-color: aqua;
+    cursor: pointer;
+}
+/* #cars {
+    font-size: 30px;
+} */
+select {
+    width: 192px;
+    height: 39px;
+    padding: 10px 5px;
+}

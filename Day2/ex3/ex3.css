@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  width: 600px;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px;
+}
+p {
+font-size: 25px;
+font-weight: 700;
+}.row_1 {
+    margin: 20px 0;
+}
+textarea {
+    margin: 0 0 10px 0;
+}
+input {
+    padding: 5px;
+}
