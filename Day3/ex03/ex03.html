@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Access Manager</title>
+    <link rel="stylesheet" href="./ex03.css">
+</head>
+
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="lbl-name">Username</label>
+            <input type="text" id="lbl-name" name="name">
+        </div>
+        <div>
+            <label for="lbl-password">Password</label>
+            <input type="password" id="lbl-password" name="password">
+        </div>
+        <div>
+            <label for="lbl-province">City of <br /> Employment</label>
+            <input type="text" id="lbl-province" name="province">
+        </div>
+        <div>
+            <label for="lbl-websever">Web server :</label>
+            <select name="websever" id="lbl-websever">
+                <option value="0">-Choose a sever-</option>
+                <option value="1">PHP</option>
+                <option value="2">NodeJS</option>
+                <option value="3">ReactJS</option>
+            </select>
+        </div>
+        <div class="radio">
+            <label>Please specify <br> your role:</label>
+            <div id="radio-box">
+                <label>
+                    <input type="radio" name="member" value="0">&nbsp Admin
+                </label>
+                <label>
+                    <input type="radio" name="member" value="1">&nbsp Engineer
+                </label>
+                <label>
+                    <input type="radio" name="member" value="2">&nbsp Manager
+                </label>
+                <label>
+                    <input type="radio" name="member" value="3">&nbsp Guest
+                </label>
+            </div>
+        </div>
+        <div>
+            <label>Single Sign-on <br> to the following</label>
+            <div id="check-box">
+                <label>
+                    <input type="checkbox" name="source" value="0"> Mail
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="1"> Payroll
+                </label>
+                <label>
+                    <input type="checkbox" name="source" value="2"> Self-service
+                </label>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit" id="submit">Login</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+
+
+
+
+
+
+    </form>
+
+</body>
+
+</html>
