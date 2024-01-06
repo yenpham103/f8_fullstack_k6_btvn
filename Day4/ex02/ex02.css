@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  border: 1px solid #333;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+}
+p {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #3a2617;
+}
+h1 {
+  font-family: "Alfa Slab One", serif;
+  font-size: 40px;
+  color: #3a2617;
+  margin: 20px 0;
+}
+input,
+button {
+  width: 250px;
+  height: 40px;
+  outline: none;
+  margin: 10px;
+  border: 1px solid #333;
+}
+input::placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #3a2617;
+  font-size: 14px;
+  font-weight: 700px;
+  padding: 10px;
+}
+button {
+  background-color: #b0322b;
+  color: #fff;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
