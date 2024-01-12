@@ -6,12 +6,12 @@
   font-family: "Nunito", sans-serif;
 }
 body {
-  background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
+  background-image: url(./img/bg.jpg);
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px;
+  padding: 100px 0 0 0;
 }
 .content {
   display: flex;
