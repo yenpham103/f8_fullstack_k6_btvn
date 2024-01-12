@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #ebf5fe;
+}
+.main {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.item {
+  padding: 15px;
+}
+
+.list-items .item {
+  width: 25%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: #fff;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(248 113 113);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(223, 142, 142, 0.19) 0px 10px 20px,
+    rgba(219, 155, 155, 0.23) 0px 6px 6px;
+}
+.title .icon i {
+  color: #fff;
+  font-size: 20px;
+}
+.item .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.item .title p {
+  font-size: 20px;
+  font-weight: 700;
+}
+.item .des {
+  font-size: 16px;
+  color: #666;
+  word-wrap: break-word;
+  margin: 20px 0;
+}
+.item .learn a {
+  font-size: 18px;
+  color: rgb(26, 26, 210);
+  text-decoration: none;
+}
+.item:hover {
+  border: 2px solid #cf6b6b;
+  border-radius: 5px;
+}
+.list-items {
+  display: flex;
+  justify-content: space-around;
+}

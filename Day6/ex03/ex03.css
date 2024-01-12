@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: auto;
+  position: relative;
+}
+.content .just-log {
+  background-color: #eb6355;
+  width: 40%;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.just-log .title .title-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.just-log .title .title-icon span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #eb6355;
+  line-height: 1.5;
+}
+.just-log .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.just-log .title .jl {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.just-log .des {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.2;
+  word-spacing: 2px;
+  word-wrap: break-word;
+}
+.just-log button {
+  width: 130px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.just-log button a {
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  color: #eb6355;
+  letter-spacing: 1px;
+}
+.just-log .social-icon ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+.just-log .social-icon ul li {
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #3333331f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.social-icon ul li a i {
+  color: #fff;
+  font-size: 16px;
+}
+.content .form {
+  background-color: #fff;
+  width: 60%;
+  height: 460px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.content .form h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+.content .form h2 span {
+  color: #eb6355;
+}
+.form .line {
+  width: 50px;
+  height: 2px;
+  background-color: #eb6355;
+  margin: 10px 0;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+}
+#lbl-email,
+#lbl-password {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin: 20px 0;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+#lbl-email:hover {
+  border: 1px solid #eb6355;
+}
+#lbl-email:hover::placeholder {
+  color: #eb6355;
+}
+#lbl-password:hover {
+  border: 1px solid #eb6355;
+}
+#lbl-password:hover::placeholder {
+  color: #eb6355;
+}
+#lbl-checkbox {
+  opacity: 0.6;
+  cursor: pointer;
+}
+form button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #eb6355;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.form .footer-form {
+  margin: 20px 0;
+  text-align: center;
+  color: #666;
+  font-family: 16px;
+  line-height: 1.3;
+}
+.content-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: #fff;
+  color: #eb6355;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-119px, -28px);
+}
+.content-icon i {
+  font-size: 16px;
+  font-weight: 900;
+}
