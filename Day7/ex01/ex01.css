@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+.main {
+  background-image: url(./img/bg.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 425px;
+  position: relative;
+}
+.banner {
+  background-color: #ffffff97;
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100px, 100px);
+}
+.banner h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  word-spacing: 1px;
+  color: #bf4240;
+}
+.banner p {
+  font-size: 16px;
+  color: #3f3424;
+  line-height: 1.3;
+  margin: 5px 0;
+}
+
+.banner .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner .icon i {
+  font-size: 16px;
+  color: #333;
+}
+.banner .icon p {
+  font-size: 16px;
+  color: #3f3424;
+  line-height: 1.3;
+}
+.banner .price {
+    width: 100px;
+    height: 40px;
+    background-color: #bf4240;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-25px, 20px);
+    cursor: pointer;
+}
+.banner .price p {
+    color: #fff;
+
+}
