@@ -20,9 +20,9 @@ h2 {
   height: auto;
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 50px;
-  column-gap: 30px;
-  row-gap: 50px;
+  padding: 20px;
+  column-gap: 20px;
+  row-gap: 30px;
 }
 
 .content {
