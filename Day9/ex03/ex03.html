@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <link rel="stylesheet" href="./ex03.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2>Drop Us a Line</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, tempore?</p>
+        <form action="post">
+            <div class="form">
+                <div class="inputBox">
+                    <input type="text" id="first-name" name="first-name" required>
+                    <span>First Name *</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="last-name" name="last-name" required>
+                    <span>Last Name *</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" id="email" name="email" required>
+                    <span>Email *</span>
+                </div>
+                <select id="department" required>
+                    <option disabled value="">Select a department</option>
+                    <option value="sale">Sales</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="customer-support">Customer Support</option>
+                </select>
+            </div>
+            <div class="mes">
+                <div class="inputBox">
+                    <textarea name="message" id="message" required></textarea>
+                    <span>Message *</span>
+                </div>
+            </div>
+            <button>Send Message</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+.content {
+  padding: 50px;
+  width: 50%;
+  margin: 50px auto;
+  border: 1px solid #00dfc4;
+}
+.content h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+}
+.content p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 20px 0 50px 0;
+}
+.content .form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+.inputBox {
+  position: relative;
+}
+.inputBox input,
+select {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #3333337b;
+  border-radius: 5px;
+  transition: 1s linear;
+}
+.inputBox span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  position: absolute;
+  left: 0;
+  margin: 10px 10px;
+  padding: 8px;
+  transition: 1s linear;
+  pointer-events: none;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #00dfc4;
+  transform: translate(15px, -23px);
+  background-color: #fff;
+}
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 2px solid #00dfc4;
+}
+.inputBox input:focus {
+    background-color: transparent;
+}
+.inputBox input:invalid {
+}
+
+select:focus {
+  border: 2px solid #00dfc4;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.mes #message {
+  padding: 16px 17px;
+  outline: none;
+  border: 2px solid #3333337b;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+}
+#message:valid ~ span,
+#message:focus ~ span {
+  color: #00dfc4;
+  transform: translate(10px, -23px);
+  background-color: #fff;
+}
+#message:valid,
+#message:focus {
+  border: 2px solid #00dfc4;
+}
+button {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #00dfc4;
+  cursor: pointer;
+}
+.inputBox #email {
+  position: relative;
+}
+.inputBox #email::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
