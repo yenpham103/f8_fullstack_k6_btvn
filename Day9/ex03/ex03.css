@@ -8,7 +8,7 @@ body {
   background-color: #fff;
 }
 .content {
-  padding: 50px;
+  padding: 20px;
   width: 50%;
   margin: 50px auto;
   border: 1px solid #00dfc4;
@@ -83,7 +83,7 @@ form {
   border: 2px solid #3333337b;
   border-radius: 5px;
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
 #message:valid ~ span,
 #message:focus ~ span {
