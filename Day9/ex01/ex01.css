@@ -20,7 +20,7 @@ img {
 .main {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 200px;
   padding: 20px;
   width: 100%;
   height: auto;
@@ -33,6 +33,11 @@ img {
 }
 .content-text {
   position: relative;
+  /* transition: 1s linear; */
+}
+.content-text:hover {
+  transform: rotateY(0) translateX(190px);
+
 }
 .content-header {
   display: flex;

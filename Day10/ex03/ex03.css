@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #9bdcdd;
+}
+.box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  transform-origin: 50% 50%;
+}
+.box::before {
+  position: absolute;
+  background-color: #e69c9f;
+  width: 100px;
+  height: 100px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0 100%);
+}
+.box::after {
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  background-color: #000;
+  content: "";
+  bottom: -30px;
+  filter: blur(10px);
+  transform: translate(0, 70px);
+  transition: 100ms linear;
+
+}
+.content {
+  position: absolute;
+  padding: 10px;
+  background-color: #f2eee4;
+  width: 80%;
+  height: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: height 300ms linear;
+}
+.content span {
+  font-size: 12px;
+  text-align: center;
+  word-wrap: break-word;
+  color: #d26f72;
+}
+.designBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #d26f72;
+  display: block;
+  clip-path: polygon(0 0, 50% 35%, 100% 0, 100% 100%, 0 100%);
+}
+.designBox::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background-color: #ac474a;
+  content: "";
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+.box:hover .content {
+  transform: translate(-50%, -30px);
+  visibility: visible;
+  opacity: 1;
+  height: 80px;
+}
+.while {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  left: 0;
+  transform: translate(0, -100px);
+  background-color: #9bdcdd;
+  visibility: visible;
+  opacity: 1;
+  transition: height 100ms linear;
+}
+.box:hover .while {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+.box:hover::after {
+  transform: translate(0, 10px);
+
+}
