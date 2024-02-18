@@ -294,7 +294,7 @@ img {
     position: absolute;
     top: 50%;
     right: 10%;
-    margin-right: 27px;
+    margin-right: 27px !important;
   }
 }
 @media screen and (max-width: 1399.98px) {
