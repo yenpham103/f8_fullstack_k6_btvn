@@ -103,16 +103,15 @@ img {
   height: 100%;
   position: absolute;
   top: 50%;
-  right: 20%;
+  right: 13%;
   transform: translate(20px, -265px);
-  /* z-index: 10; */
 }
 .img-air {
   width: 160px;
   height: 156px;
 }
 .img-air > img {
-  object-fit: cover;
+  object-fit: contain;
 }
 .landing-form .form-box {
   width: 484px;
@@ -235,7 +234,6 @@ img {
 .landing-form .form-box {
   visibility: hidden;
   opacity: 0;
-
   transform: translate(80%, 0);
   transition: 400ms linear;
 }
@@ -290,11 +288,29 @@ img {
 
 /* Responsive */
 @media screen and (max-width: 1600px) {
+  .landing-right-while {
+    display: none;
+  }
+  .landing .landing-info {
+    position: static;
+    width: 100%;
+    margin: 50px auto 0 auto;
+    z-index: 1000;
+  }
   .landing .landing-form {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    margin-right: 27px !important;
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    transform: translate(0, -100px);
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(0, 100px);
+  }
+
+  .tab-switch-button {
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 1399.98px) {
@@ -319,29 +335,51 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 }
 @media screen and (max-width: 1199.98px) {
-  /* code css */
+  
 }
 @media screen and (max-width: 991.98px) {
-  /* code css */
+  
 }
 @media screen and (max-width: 765.98px) {
+  
 }
 @media screen and (max-width: 575.98px) {
+  .landing {
+    overflow-x: hidden;
+  }
   .landing .landing-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   .landing .landing-info h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .landing-form .form-box {
-    width: 384px;
+    width: 300px;
+    padding: 30px;
   }
   .landing-form .img-air {
     width: 140px;
-    height: 126px;
+    height: 135px;
+  }
+  .form-box .img-air {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-65px, -65px);
+  }
+  .form {
+    padding: 30px 0 0 0;
+  }
+  .landing-form .form-register {
+    margin-top: -450px;
+  }
+  .tab-switch-button {
+    margin-top: 6rem;
+    width: 160px;
+    height: 45px;
+    font-size: 1.6rem;
   }
 }
