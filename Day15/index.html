@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai Buoi 15</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="landing">
+        <div class="container">
+            <div class="content">
+                <header class="header">
+                    <form class="form-search">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.7659 1.77808C6.24937 1.77808 1.77734 6.25011 1.77734 11.7666C1.77734 17.2832 6.24937 21.7552 11.7659 21.7552C14.045 21.7552 16.1458 20.9919 17.8266 19.707L20.8354 22.708C21.2264 23.098 21.8596 23.0972 22.2496 22.7062C22.6396 22.3151 22.6388 21.682 22.2478 21.292L19.2875 18.3393C20.8236 16.5828 21.7545 14.2834 21.7545 11.7666C21.7545 6.25011 17.2824 1.77808 11.7659 1.77808ZM3.77734 11.7666C3.77734 7.35467 7.35394 3.77808 11.7659 3.77808C16.1779 3.77808 19.7545 7.35467 19.7545 11.7666C19.7545 16.1786 16.1779 19.7552 11.7659 19.7552C7.35394 19.7552 3.77734 16.1786 3.77734 11.7666Z"
+                                    fill="#A2A5B5"
+                                    style="fill:#A2A5B5;fill:color(display-p3 0.6353 0.6471 0.7098);fill-opacity:1;" />
+                            </svg>
+                        </span>
+                        <label>
+                            <input type="text" placeholder="Search by creator or collection">
+                        </label>
+                    </form>
+                    <ul class="navbar">
+                        <li class="eth">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18"
+                                    fill="none">
+                                    <path d="M3 10.0198L8.0329 16.9935V12.9803L3 10.0198Z" fill="#F8FCFF"
+                                        style="fill:#F8FCFF;fill:color(display-p3 0.9725 0.9882 1.0000);fill-opacity:1;" />
+                                    <path d="M8.03296 17.0593L13.0001 10.0198L8.03296 13.0132V17.0593Z" fill="#AFD6F9"
+                                        style="fill:#AFD6F9;fill:color(display-p3 0.6863 0.8392 0.9765);fill-opacity:1;" />
+                                    <path d="M8 7.94081V11.9408L11 9.6733L8 7.94081Z" fill="#69B0F9"
+                                        style="fill:#69B0F9;fill:color(display-p3 0.4118 0.6902 0.9765);fill-opacity:1;" />
+                                    <path d="M8 0.940857V6.86191L3 9.16454L8 0.940857Z" fill="#F8FCFF"
+                                        style="fill:#F8FCFF;fill:color(display-p3 0.9725 0.9882 1.0000);fill-opacity:1;" />
+                                    <path d="M13 9.09871L8 6.86186V0.940811L13 9.09871Z" fill="#AFD6F9"
+                                        style="fill:#AFD6F9;fill:color(display-p3 0.6863 0.8392 0.9765);fill-opacity:1;" />
+                                    <path d="M5 9.72425L8 11.9408L7.98039 7.94081L5 9.72425Z" fill="#A9D3FB"
+                                        style="fill:#A9D3FB;fill:color(display-p3 0.6627 0.8275 0.9843);fill-opacity:1;" />
+                                </svg>
+                            </span>
+                            <span>
+                                3,25 ETH
+                            </span>
+                        </li>
+                        <li class="bell">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none">
+                                    <path
+                                        d="M13.2843 25.6372C13.9509 25.4962 18.0125 25.4962 18.679 25.6372C19.2488 25.7688 19.865 26.0763 19.865 26.7478C19.8319 27.387 19.4569 27.9537 18.9387 28.3136C18.2669 28.8373 17.4784 29.169 16.6542 29.2885C16.1983 29.3476 15.7504 29.3489 15.3105 29.2885C14.4849 29.169 13.6964 28.8373 13.0259 28.3122C12.5065 27.9537 12.1314 27.387 12.0983 26.7478C12.0983 26.0763 12.7145 25.7688 13.2843 25.6372ZM16.0604 2.66667C18.8339 2.66667 21.6671 3.9827 23.35 6.16622C24.4419 7.57222 24.9428 8.97688 24.9428 11.1604V11.7284C24.9428 13.403 25.3854 14.39 26.3594 15.5275C27.0975 16.3654 27.3334 17.4411 27.3334 18.608C27.3334 19.7737 26.9504 20.8802 26.1832 21.7786C25.1787 22.8556 23.7621 23.5431 22.3164 23.6626C20.2213 23.8412 18.125 23.9917 16.0007 23.9917C13.8752 23.9917 11.7801 23.9017 9.68509 23.6626C8.23802 23.5431 6.82144 22.8556 5.8183 21.7786C5.05104 20.8802 4.66675 19.7737 4.66675 18.608C4.66675 17.4411 4.90395 16.3654 5.64073 15.5275C6.6452 14.39 7.05864 13.403 7.05864 11.7284V11.1604C7.05864 8.91779 7.61785 7.45136 8.76941 6.01582C10.4815 3.92227 13.2259 2.66667 15.9411 2.66667H16.0604Z"
+                                        fill="#383C6C"
+                                        style="fill:#383C6C;fill:color(display-p3 0.2196 0.2353 0.4235);fill-opacity:1;" />
+                                    <circle cx="23.5" cy="6.5" r="3.5" fill="#EB4A95"
+                                        style="fill:#EB4A95;fill:color(display-p3 0.9216 0.2902 0.5843);fill-opacity:1;" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="create">
+                            <a href="#">Create</a>
+                        </li>
+                        <li class="connect">
+                            <a href="#">Connect Wallet</a>
+                        </li>
+                    </ul>
+                    <div class="user">
+                        <div class="user-social">
+                            <div class="user-avatar">
+                                <img src="./img/user.png" alt="user">
+
+                            </div>
+                            <div class="user-info">
+                                <p>Pham Yen</p>
+                                <p> @dev.vn</p>
+                            </div>
+                        </div>
+                        <div class="user-icon-down btn-show">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                </header>
+                <!-- End Header -->
+                <aside class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li class="pt-10">
+                            <svg class="svg-margin" xmlns="http://www.w3.org/2000/svg" width="50" height="60"
+                                viewBox="0 0 50 60" fill="none">
+                                <g filter="url(#filter0_d_8016_338)">
+                                    <path
+                                        d="M22.0959 9.00053C20.8973 9.00087 19.7479 9.47645 18.9003 10.3227C18.0528 11.169 17.5765 12.3166 17.5762 13.5134V15.5636H15.5229C14.9289 15.5631 14.3407 15.6795 13.7918 15.9063C13.243 16.133 12.7443 16.4656 12.3243 16.885C11.9043 17.3044 11.5713 17.8023 11.3442 18.3503C11.1171 18.8984 11.0005 19.4858 11.0011 20.0788V24.5902H17.5751V28.6904H15.5219C14.3229 28.6903 13.173 29.1656 12.325 30.0119C11.477 30.8582 11.0004 32.0061 11 33.2032V41H15.524C16.1174 40.9998 16.7049 40.8828 17.2531 40.6556C17.8012 40.4287 18.2991 40.0961 18.7185 39.6769C19.1379 39.2577 19.4704 38.7601 19.6972 38.2125C19.9239 37.6648 20.0404 37.0782 20.04 36.4857H20.0458V33.507L20.0337 33.5086V14.5319L20.0437 14.5343V13.5142C20.0448 12.9703 20.2613 12.4489 20.6459 12.0637C21.0306 11.6786 21.5522 11.4611 22.097 11.4586H29.949V13.5142C29.9474 14.0579 29.7301 14.5788 29.3449 14.963C28.9596 15.3471 28.4377 15.5634 27.8932 15.5643H20.973V18.025H27.8921C29.0907 18.0251 30.2402 17.5498 31.0878 16.7036C31.9355 15.8574 32.4117 14.7097 32.4118 13.5129V9L22.0959 9.00053ZM17.5762 22.1292H13.4681V20.0791C13.469 19.5345 13.6857 19.0125 14.071 18.627C14.4562 18.2415 14.9786 18.0239 15.524 18.0219H17.5772L17.5762 22.1292ZM17.5762 36.488C17.5753 37.0315 17.3587 37.5528 16.9739 37.9373C16.5891 38.322 16.0674 38.5388 15.5229 38.5401H13.467V33.2046C13.4675 32.6606 13.6844 32.1391 14.0699 31.7546C14.4554 31.3701 14.9781 31.1543 15.5229 31.1545H17.5762V36.488ZM20.973 24.5899H26.1587V26.6421C26.1567 27.1857 25.9393 27.7064 25.5541 28.0905C25.169 28.4746 24.6472 28.6909 24.1028 28.6922H20.973V31.1545H24.1039C24.6975 31.1548 25.2854 31.0383 25.8339 30.8116C26.3824 30.5849 26.8808 30.2525 27.3005 29.8334C27.7203 29.4143 28.0532 28.9166 28.2802 28.369C28.5072 27.8213 28.6239 27.2343 28.6236 26.6416H28.6257V22.1287H20.973V24.5899Z"
+                                        fill="url(#paint0_linear_8016_338)" style="" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_8016_338" x="0" y="0" width="49.4119" height="60"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dx="3" dy="5" />
+                                        <feGaussianBlur stdDeviation="7" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.333333 0 0 0 0 0.247059 0 0 0 0 0.960784 0 0 0 0.54 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_8016_338" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8016_338"
+                                            result="shape" />
+                                    </filter>
+                                    <linearGradient id="paint0_linear_8016_338" x1="21.7059" y1="9" x2="21.7059" y2="41"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#3461FF"
+                                            style="stop-color:#3461FF;stop-color:color(display-p3 0.2042 0.3792 1.0000);stop-opacity:1;" />
+                                        <stop offset="1" stop-color="#8454EB"
+                                            style="stop-color:#8454EB;stop-color:color(display-p3 0.5190 0.3300 0.9208);stop-opacity:1;" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="pt-7">
+                            <svg class="ml-6" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                viewBox="0 0 48 48" fill="none">
+                                <g filter="url(#filter0_d_7998_489)">
+                                    <path
+                                        d="M16.92 20.4697C18.33 20.4697 19.46 21.6107 19.46 23.0307V26.4397C19.46 27.8497 18.33 28.9997 16.92 28.9997H13.54C12.14 28.9997 11 27.8497 11 26.4397V23.0307C11 21.6107 12.14 20.4697 13.54 20.4697H16.92ZM28.4601 20.4697C29.8601 20.4697 31.0001 21.6107 31.0001 23.0307V26.4397C31.0001 27.8497 29.8601 28.9997 28.4601 28.9997H25.0801C23.6701 28.9997 22.5401 27.8497 22.5401 26.4397V23.0307C22.5401 21.6107 23.6701 20.4697 25.0801 20.4697H28.4601ZM28.4601 8.99997C29.8601 8.99997 31.0001 10.15 31.0001 11.561V14.97C31.0001 16.39 29.8601 17.53 28.4601 17.53H25.0801C23.6701 17.53 22.5401 16.39 22.5401 14.97V11.561C22.5401 10.15 23.6701 8.99997 25.0801 8.99997H28.4601Z"
+                                        fill="url(#paint0_linear_7998_489)" style="" />
+                                </g>
+                                <g filter="url(#filter1_d_7998_489)">
+                                    <path
+                                        d="M19.46 11.561C19.46 10.15 18.33 9 16.92 9H13.54C12.14 9 11 10.15 11 11.561V14.97C11 16.39 12.14 17.53 13.54 17.53H16.92C18.33 17.53 19.46 16.39 19.46 14.97V11.561Z"
+                                        fill="url(#paint1_linear_7998_489)" style="" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_7998_489" x="0" y="-3.05176e-05" width="48.0001"
+                                        height="47.9997" filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dx="3" dy="5" />
+                                        <feGaussianBlur stdDeviation="7" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.333333 0 0 0 0 0.247059 0 0 0 0 0.960784 0 0 0 0.54 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_7998_489" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7998_489"
+                                            result="shape" />
+                                    </filter>
+                                    <filter id="filter1_d_7998_489" x="0" y="0" width="36.46" height="36.53"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dx="3" dy="5" />
+                                        <feGaussianBlur stdDeviation="7" />
+                                        <feComposite in2="hardAlpha" operator="out" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0.333333 0 0 0 0 0.247059 0 0 0 0 0.960784 0 0 0 0.54 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_7998_489" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7998_489"
+                                            result="shape" />
+                                    </filter>
+                                    <linearGradient id="paint0_linear_7998_489" x1="21" y1="8.99997" x2="21"
+                                        y2="28.9997" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#3461FF"
+                                            style="stop-color:#3461FF;stop-color:color(display-p3 0.2042 0.3792 1.0000);stop-opacity:1;" />
+                                        <stop offset="1" stop-color="#8454EB"
+                                            style="stop-color:#8454EB;stop-color:color(display-p3 0.5190 0.3300 0.9208);stop-opacity:1;" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_7998_489" x1="11" y1="13.265" x2="19.46"
+                                        y2="13.265" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70F1A7"
+                                            style="stop-color:#70F1A7;stop-color:color(display-p3 0.4392 0.9451 0.6549);stop-opacity:1;" />
+                                        <stop offset="1" stop-color="#62D6F1"
+                                            style="stop-color:#62D6F1;stop-color:color(display-p3 0.3843 0.8392 0.9451);stop-opacity:1;" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </li>
+                        <li class="mess">
+                            <label>
+                                <img src="./img/mess.png" alt="message">
+                            </label>
+                        </li>
+                        <li class="buy">
+                            <label>
+                                <img src="./img/buy.png" alt="Buy">
+                            </label>
+                        </li>
+                        <li class="active">
+                            <label>
+                                <img src="./img/active.png" alt="Active">
+                            </label>
+                        </li>
+                        <li class="time">
+                            <label>
+                                <img src="./img/time.png" alt="time">
+                            </label>
+                        </li>
+                        <li class="line">
+                            <div></div>
+                        </li>
+                        <li class="wallet">
+                            <label>
+                                <img src="./img/wallet.png" alt="wallet">
+                            </label>
+                        </li>
+                        <li class="friend">
+                            <label>
+                                <img src="./img//friend.png" alt="friend">
+                            </label>
+                        </li>
+                        <li class="setiing">
+                            <label>
+                                <img src="./img/setting.png" alt="setting">
+                            </label>
+                        </li>
+                        <li class="exit">
+                            <label>
+                                <img src="./img/exit.png" alt="Log-out">
+                            </label>
+                        </li>
+
+
+                    </ul>
+
+                </aside>
+                <article class="main">
+                    <div class="main-title">
+                        <h1>Popular NFT’s Live Auction</h1>
+                        <label>
+                            <span>
+                                Show More
+                            </span>
+                            <span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </label>
+
+                    </div>
+                    <div class="main-content">
+                        <div class="main-content-left">
+                            <img src="./img/main-img-1.png" alt="live">
+                        </div>
+                        <div class="main-content-right">
+                            <img src="./img/main-img-2.png" alt="live2">
+
+                        </div>
+                    </div>
+                    <div class="seller">
+                        <div class="top-seller">
+                            <span>⭐ Top Sellers</span>
+                        </div>
+                        <div class="top-seller-list">
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div>
+                            <!-- <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div> -->
+                            <!-- <div class="top-seller-user1 top-seller-user">
+                                <div class="seller-ava">
+                                    <img src="./img/user1.png" alt="user1">
+                                </div>
+                                <div class="seller-info">
+                                    <span>@hgan</span>
+                                    <span>$232,102</span>
+                                </div>
+                                <div class="tick">
+                                    <img src="./img/tick.png" alt="tick">
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+                    <!-- End seller -->
+                    <div class="hot-bid">
+                        <div class="hot-bid-title">
+                            <span>🔥 Hot Bids</span>
+                        </div>
+                        <div class="hot-bid-list">
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-1.png" alt="">
+                            </div>
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-2.png" alt="">
+                            </div>
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-3.png" alt="">
+                            </div>
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-4.png" alt="">
+                            </div>
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-5.png" alt="">
+                            </div>
+                            <div class="hot-bid-img ">
+                                <img src="./img/hot-6.png" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </article>
+                <div class="my-profile ">
+                    <div class="social">
+                        <h2>My Profile</h2>
+                        <div class="avatar">
+                            <img src="./img/user.png" alt="">
+                        </div>
+                        <h3>Pham Yen</h3>
+                        <div class="my-social">
+                            <div class="asset">
+                                <span>120</span>
+                                <span>Asset</span>
+                            </div>
+                            <div class="follower">
+                                <span>10k</span>
+                                <span>Follower</span>
+                            </div>
+                            <div class="likes">
+                                <span>70k</span>
+                                <span>Likes</span>
+                            </div>
+                            <div class="bidding">
+                                <span>60</span>
+                                <span>Bidding</span>
+                            </div>
+                        </div>
+                        <div class="balance">
+                            <h3>Your Balance</h3>
+                            <div class="balance-info">
+                                <div class="balance-img">
+                                    <img src="./img/balance.png" alt="">
+                                </div>
+                                <p class="ml">4,668 ETH</p>
+                                <p class="add">Add ></p>
+                            </div>
+                        </div>
+                        <div class="revenue">
+                            <div class="revenue-title">
+                                <h3>Revenue</h3>
+                                <label>
+                                    <span>This Month</span>
+                                    <span><i class="fa-solid fa-chevron-down"></i></span>
+                                </label>
+                            </div>
+                            <div class="char">
+                                <img src="./img/char.png" alt="">
+                            </div>
+                        </div>
+                        <div class="recent">
+                            <div class="recent-title">
+                                <h3>Recent Activity</h3>
+                            </div>
+                            <label>
+                                <span>See All</span>
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                            </label>
+                        </div>
+                        <div class="recent-img">
+                            <img src="./img/recent-1.png" alt="">
+                        </div>
+                        <div class="recent-img">
+                            <img src="./img/recent-2.png" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="overlay">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
