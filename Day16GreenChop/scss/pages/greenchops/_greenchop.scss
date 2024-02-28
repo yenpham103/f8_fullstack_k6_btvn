@@ -1,5 +1,5 @@
 .greenchop {
-    margin-top: 200px;
+    margin-top: 100px;
     .greenchop-content {
         display: flex;
         flex-direction: column;
@@ -22,7 +22,6 @@
         .list-items {
             margin: 117.5px 0 141.67px 0;
             display: flex;
-            align-items: center;
             gap: 35px;
 
             .item-1, .item-2, .item-3 {
