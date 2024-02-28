@@ -274,8 +274,7 @@ ul, ol {
   position: relative;
   margin-top: 108px;
 }
-.hero::after {
-  content: "";
+.hero .bg-green {
   width: 50vh;
   height: 100%;
   background-color: #DCFFCA;
@@ -342,7 +341,7 @@ ul, ol {
 }
 
 .greenchop {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .greenchop .greenchop-content {
   display: flex;
