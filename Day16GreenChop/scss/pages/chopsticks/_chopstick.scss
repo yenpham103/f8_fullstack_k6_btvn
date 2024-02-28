@@ -1,0 +1,98 @@
+.chopsticks {
+    position: relative;
+    .bg-pink {
+        width: 100%;
+        height: 320px;
+        background-color: #FFF0E7;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+    }
+    .chopstick-content {
+        padding: 0 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            text-align: center;
+            max-width: 394px;
+        }
+        .des {
+            font-size: $fontSize;
+            font-weight: 400;
+            max-width: 745px;
+            text-align: center;
+            margin: 25px 0  50px 0;
+        }
+        .list-items {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 24px;
+            padding-bottom: 100px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            .item {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                .item-img {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .item-content {
+                    padding: 20px;
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: #E05000;
+                        text-shadow: 0px 3.333px 3.333px rgba(0, 0, 0, 0.25);
+                    }
+                    p {
+                        font-size: $fontSize;
+                        font-weight: 400;
+                        color: #19191B;
+                    }
+
+                }
+            }
+        }
+      
+    }
+   
+}
+@media screen and (max-width: 991px) {
+    .chopsticks {
+        .bg-pink {
+            display: none;
+        }
+        .chopstick-content {
+            .list-items {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 765px) {
+    .chopsticks {
+       
+        .chopstick-content {
+            .list-items {
+                display: grid;
+                grid-template-columns: auto;
+            }
+        }
+
+    }
+}

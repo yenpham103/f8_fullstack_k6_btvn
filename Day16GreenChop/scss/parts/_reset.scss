@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: $font;
+    color: $textColor;
+    line-height: 1.25;
+    font-size: $fontSize;
+    overflow-y: scroll;
+}
+a {
+    text-decoration: none;
+    color: $linkColor;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul, ol {
+    list-style-type: none;
+}

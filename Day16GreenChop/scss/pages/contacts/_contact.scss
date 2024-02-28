@@ -1,0 +1,214 @@
+.contacts {
+    margin: 133px 0;
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 133px;
+        .contact-quality {
+            padding: 0 112px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            row-gap: 39px;
+            .item {
+                display: flex;
+                align-items: start;
+                gap: 16px;
+                .des {
+                    h4 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                        max-width: 218px;
+                        margin-top: 6px;
+                    }
+                }
+            }
+
+        }
+        .contact-form {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            .form {
+                padding-top: 55px;
+                p {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    margin-top: 26px;
+
+                    p {
+                        width: 100%;
+                        label {
+                            width: 100%;
+                            input {
+                                padding: 14px;
+                                width: 100%;
+                                border-radius: 6.667px;
+                                border: 0.833px solid #A3A3A3;
+                                &::placeholder {
+                                    font-size: $fontSize;
+                                    font-family: $font;
+                                    font-weight: 400;
+                                    color: #A3A3A3;
+                                }
+                            }
+                            
+                        }
+                        &:nth-child(2) {
+                            display: flex;
+                            gap: 17.5px;
+                            margin: 23px 0;
+                        }
+                        &:nth-child(3) {
+                            label {
+                                width: 100%;
+                                textarea {
+                                    padding: 14px;
+                                    width: 100%;
+                                    height: 149px;
+                                    border-radius: 6.667px;
+                                    border: 0.833px solid #A3A3A3;
+                                    &::placeholder {
+                                        font-size: $fontSize;
+                                        font-family: $font;
+                                        font-weight: 400;
+                                        color: #A3A3A3;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 126px;
+                            height: 46px;
+                            margin-top: 26px ;
+                            background-color: $primaryColor;
+                            color: #fff;
+                            font-size: $fontSize;
+                            font-weight: 700;
+                            border-radius: 6.667px;
+                            cursor: pointer;
+                            
+                        }
+                    }
+
+                }
+            }
+           
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contacts {
+        .content {
+            .contact-quality {
+                padding: 0 60px;
+                display: grid ;
+                grid-template-columns:  auto auto;
+                gap: 40px;
+            }
+
+            .contact-form {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;
+                align-items: center;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 765px) {
+    .contacts {
+        margin: 0;
+        .content {
+            gap: 0;
+            .contact-quality {
+                display: grid ;
+                grid-template-columns:  auto;
+                align-items: center;
+                gap: 20px;
+                .item {
+                    display: grid;
+                    grid-template-columns: 80px 1fr;
+                    p {
+                        max-width: 100% !important;
+                    }
+                }
+            }
+
+            .contact-form {
+                padding: 0 60px;
+                display: grid;
+                grid-template-columns: auto;
+                gap: 10px;
+                align-items: center;
+                .contact-form-img {
+                    display: none;
+                }
+                .form {
+                    form {
+                        p {
+                            &:nth-child(2) {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+@media screen and (max-width: 575px) {
+    .contacts {
+        margin: 0;
+        .content {
+            gap: 0;
+            .contact-quality {
+                padding: 0;
+                .item {
+                    display: grid;
+                    grid-template-columns: 50px 1fr;
+                   .icon {
+                    width: 50px !important;
+                    height: 50px !important;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                       }
+                   }
+                   .des {
+                    h4 {
+                        font-size: 1.4rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                    }
+                   }
+                   
+                }
+                
+            }
+
+            .contact-form {
+                padding: 0;
+            }
+
+        }
+    }
+}

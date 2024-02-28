@@ -1,0 +1,21 @@
+//Import Parts
+
+@import "parts/variables";
+@import "parts/fonts";
+@import "parts/reset";
+@import "parts/mixin";
+@import "parts//base";
+
+//Import Layouts
+
+@import "layouts/header";
+@import "layouts/footer";
+
+//Import Pages
+
+@import "pages/home/hero";
+@import "pages/greenchops/greenchop";
+@import "pages/products/product";
+@import "pages/abouts/about";
+@import "pages/chopsticks/chopstick";
+@import "pages/contacts/contact";

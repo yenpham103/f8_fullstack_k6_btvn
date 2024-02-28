@@ -1,0 +1,137 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+    .logo {
+        height: 77px;
+        overflow: hidden;
+        img {
+            max-height: 100%;
+        }
+    }
+    .header-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .menu {
+            ul {
+                display: flex;
+                li {
+                    padding: 0 25px;
+                    a {
+                        font-weight: 600;
+                        padding-bottom: 43px;
+                    }
+                    &.active {
+                        a {
+                            color: $primaryColor;
+                            border-bottom: 1.667px solid $primaryColor;
+                        }
+                    }
+                    &:hover {
+                        @extend .active ;
+                    }
+                }
+               
+            }
+        }
+        .cart-icon {
+            padding: 0 25px;
+            a {
+                position: relative;
+                span {
+                    position: absolute;
+                    top: -12px;
+                    right: -6px;
+                    background: #E05000;
+                    color: #fff;
+                    padding: 0 4px;
+                    font-size: 1.2rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .search-icon {
+            padding-left: 25px;
+        }
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .menu-overlay  {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        .logo {
+            text-align: center;
+        }
+        .menu-toggle {
+            display: block;
+            label {
+                font-size: 2.5rem;
+            }
+        }
+        .header-nav {
+            .menu {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                min-width: 250px;
+                background: $primaryColor;
+                transform: translate(-100%);
+                transition: 400ms ease;
+                ul {
+                    display: block;
+                    padding: 15px 0;
+                    li {
+                        padding: 0;
+                        a {
+                            display: block;
+                            color: #fff !important;
+                            padding: 10px 15px;
+                        }
+                      
+                    }
+                }
+            }
+            .menu-overlay {
+                position: fixed;
+                inset: 0;
+                z-index: 1;
+                background-color: #00000044;
+                transition: 0.4s ease;
+                transition-property: opacity, visibility;
+            }
+            .cart-icon {
+                padding: 15px 0;
+
+            }
+            .search-icon {
+                padding-left: 15px;
+            }
+        }
+        input[type="checkbox"] {
+            &:checked {
+                ~ .menu {
+                    transform: translate(0);
+                }
+                ~ .menu-overlay {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
