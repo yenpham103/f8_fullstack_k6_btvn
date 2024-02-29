@@ -8,66 +8,225 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
+        z-index: -1;
     }
-    .hero-left {
-        width: 100%;
-        height: 100%;
+    .hero-content {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        h1 {
-            font-size: 3.667rem;
-            font-weight: 800;
+        position: relative;
+        .hero-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            h1 {
+                font-size: 3.667rem;
+                font-weight: 800;
+            }
+            .title {
+                font-size: 4.3333rem;
+                font-weight: 800;
+                max-width: 70%;
+                margin: 10px 0 27px 0;
+            }
+            .des {
+                font-size: 1.6rem;
+                font-weight: 400;
+                max-width: 75%;
+            }
+    
         }
-        .title {
-            font-size: 4.3333rem;
-            font-weight: 800;
-            max-width: 70%;
-            margin: 10px 0 27px 0;
+    
+    
+        .hero-right {
+            width: 50%;
+            pointer-events: none;
+            padding: 34px;
+            background: #DCFFCA;
+            display: flex;
+            align-items: center;
+            border-top-left-radius: 16.667px;
+            border-bottom-left-radius: 16.667px;
+                img {
+                    position: relative;
+                    top: -10px;
+                    left: -130px;
+                }
+                span {
+                    font-size: 14rem;   
+                    font-weight: 800;
+                    color: #226000;
+                    text-align: center;
+                    opacity: 0.15;
+                    line-height: 1;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    top: 132px;
+                    right: -100px;
+
+            }
+            
+
         }
-        .des {
-            font-size: 1.6rem;
-            font-weight: 400;
-            max-width: 75%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .hero {
+        margin-top: 150px;
+        .bg-green {
+            display: none;
+        }
+        .hero-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            .hero-left {
+                width: 100%;
+                align-items: center;
+                .title {
+                    max-width: 100%;
+                }
+                .des {
+                    text-align: center;
+                }
+            
+            }
+    
+            .hero-right {
+                border-radius: 16px;
+                width: 100%;
+                img {
+                    position: relative;
+                    top: -10px;
+                    left: -60px;
+    
+                }
+                span {
+                    font-size: 16rem;   
+                    transform: rotate(90deg);
+                    position: absolute;
+                    top: 465px;
+                    right: -10px;
+    
+                }
+    
+            }
         }
 
     }
 
+}
+@media screen and (max-width: 991px) {
+    .hero {
+        .hero-content {
 
-    .hero-right {
-        pointer-events: none;
-        position: relative;
-        z-index: 10;
-        padding: 34px;
-        width: 133.333333334%;
-        height: 708.333px;
-        background: #DCFFCA;
-        display: flex;
-        align-items: center;
-        border-top-left-radius: 16.667px;
-        border-bottom-left-radius: 16.667px;
-        margin-left: 40px;
-        position: relative;
-        p {
-            font-size: 16.67rem;
-            font-weight: 800;
-            color: #226000;
-            text-align: center;
-            opacity: 0.15;
-            line-height: 1;
-            transform: rotate(90deg);
-            position: absolute;
-            top: 159px;
-            right: -189px;
-            // transform: translate(10px,10px);
+            .hero-left {
+
+                .title {
+                }
+                .des {
+                }
+            
+            }
+    
+            .hero-right {
+                img {
+                    width: 60%;
+                    position: relative;
+                    top: -10px;
+                    left: -60px;
+                }
+                span {
+                    font-size: 10rem;   
+                    transform: rotate(360deg);
+                    position: absolute;
+                    top: 399px;
+                    right: 90px;
+    
+                }
+    
+            }
         }
-        .hero-right-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translate(-170px,-14px);
-        }
+
     }
+
+}
+@media screen and (max-width: 767px) {
+    .hero {
+        .hero-content {
+
+            .hero-left {
+
+                .title {
+                    font-size: 3rem;
+                }
+                .des {
+                }
+            
+            }
+    
+            .hero-right {
+                img {
+                    width: 60%;
+                    position: relative;
+                    top: -10px;
+                    left: -60px;
+                }
+                span {
+                    font-size:8rem;   
+                    transform: rotate(360deg);
+                    position: absolute;
+                    top: 355px;
+                    right: 60px;
+    
+                }
+    
+            }
+        }
+
+    }
+
+}
+@media screen and (max-width: 575px) {
+    .hero {
+        .hero-content {
+            gap: 20px;
+
+            .hero-left {
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                }
+                .des {
+                    font-size: 1.2rem;
+                }
+            
+            }
+    
+            .hero-right {
+                img {
+                    width: 60%;
+                    position: relative;
+                    top: -5px;
+                    left: -40px;
+                }
+                span {
+                    font-size:5rem;   
+                    transform: rotate(360deg);
+                    position: absolute;
+                    top: 262px;
+                    right: 32px;
+    
+                }
+    
+            }
+        }
+
+    }
+
 }

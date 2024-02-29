@@ -35,7 +35,7 @@
                 min-width: 187px;
                 background-color: #FFF;
                 &:hover {
-                    scale: 1.15;
+                    // scale: 1.15;
                 }
                 .icon {
                     width: 83.33px;
@@ -59,9 +59,11 @@
                 
             }
             .item-2 {
+                scale: 1.15;
                 .icon {
                     background-color: #F2FFEC;
                 }
+
             }
             .item-1::before {
                 content: "";
@@ -86,7 +88,7 @@
                 right: 0;
                 z-index: -1;
                 transform: translate(132px,50%);
-                background-color: #DCFFCA;
+                background-color: #FFD5BD;
             }
             
         }
@@ -102,6 +104,9 @@
                 }
                 .item-3::before {
                     display: none;
+                } 
+                .item-2 {
+                    scale: 1;
                 }
             }
         }
@@ -123,6 +128,13 @@
     .greenchop {
         .greenchop-content {
             padding: 0 20px;
+            h1 {
+                font-size: 2.5rem;
+                
+            }
+            p {
+                font-size: 1.2rem;
+            }
           
         }
     }

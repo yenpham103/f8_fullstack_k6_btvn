@@ -96,3 +96,17 @@
 
     }
 }
+@media screen and (max-width: 575px) {
+    .chopsticks {
+       
+        .chopstick-content {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .des {
+                font-size: 1.2rem;
+            }
+
+        }
+}
+}
