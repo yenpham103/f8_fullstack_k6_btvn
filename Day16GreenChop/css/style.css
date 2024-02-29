@@ -88,8 +88,9 @@ ul, ol {
 .header .header-nav .menu ul li a {
   font-weight: 600;
   padding-bottom: 43px;
+  transition: 300ms ease;
 }
-.header .header-nav .menu ul li.active a, .header .header-nav .menu ul li:hover a {
+.header .header-nav .menu ul li.active a {
   color: #46B20F;
   border-bottom: 1.667px solid #46B20F;
 }
@@ -439,8 +440,17 @@ ul, ol {
     right: 32px;
   }
 }
+#title {
+  margin-top: 100px;
+  padding: 57px 200px;
+  width: 100%;
+  background-color: #F2FFEC;
+  font-size: 4.333rem;
+  font-weight: 700;
+}
+
 .greenchop {
-  margin-top: 180px;
+  margin-top: 100px;
 }
 .greenchop .greenchop-content {
   display: flex;
@@ -527,7 +537,70 @@ ul, ol {
   background-color: #FFD5BD;
 }
 
+.back-greenchop h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-align: center;
+}
+.back-greenchop .back-greenchop-content .list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 25px;
+}
+.back-greenchop .back-greenchop-content .list-items .item {
+  display: flex;
+  align-items: center;
+  gap: 118px;
+}
+.back-greenchop .back-greenchop-content .list-items .item .text {
+  width: 50%;
+}
+.back-greenchop .back-greenchop-content .list-items .item .text span {
+  font-size: 1.333rem;
+  font-weight: 400;
+}
+.back-greenchop .back-greenchop-content .list-items .item .text span:first-child {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.back-greenchop .back-greenchop-content .list-items .item .img {
+  width: 50%;
+}
+
+.product-greenchop {
+  margin: 100px 0;
+}
+.product-greenchop img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.misson .misson-content {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+.misson .misson-content .img {
+  width: 50%;
+}
+.misson .misson-content .text {
+  width: 50%;
+}
+.misson .misson-content .text h3 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 26.33px;
+}
+.misson .misson-content .text span {
+  font-size: 1.3333rem;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 991px) {
+  #title {
+    text-align: center;
+  }
   .greenchop .greenchop-content .list-items {
     margin-top: 70px;
   }
@@ -542,6 +615,9 @@ ul, ol {
   }
 }
 @media screen and (max-width: 767px) {
+  #title {
+    padding: 40px;
+  }
   .greenchop .greenchop-content {
     padding: 0 60px;
   }
@@ -550,8 +626,40 @@ ul, ol {
     flex-direction: column;
     gap: 80px;
   }
+  .back-greenchop .back-greenchop-content .list-items .item {
+    gap: 30px;
+  }
 }
 @media screen and (max-width: 575px) {
+  .back-greenchop .back-greenchop-content .list-items {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 25px;
+  }
+  .back-greenchop .back-greenchop-content .list-items .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .back-greenchop .back-greenchop-content .list-items .item .text {
+    width: 100%;
+  }
+  .back-greenchop .back-greenchop-content .list-items .item .text span {
+    font-size: 1.333rem;
+    font-weight: 400;
+  }
+  .back-greenchop .back-greenchop-content .list-items .item .img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .back-greenchop .back-greenchop-content .list-items .item:nth-child(2) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .greenchop .greenchop-content {
     padding: 0 20px;
   }
@@ -560,6 +668,37 @@ ul, ol {
   }
   .greenchop .greenchop-content p {
     font-size: 1.2rem;
+  }
+  .product-greenchop {
+    margin: 100px 0;
+  }
+  .product-greenchop img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .misson .misson-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+  }
+  .misson .misson-content .img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .misson .misson-content .text {
+    width: 100%;
+  }
+  .misson .misson-content .text h3 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 26.33px;
+  }
+  .misson .misson-content .text span {
+    font-size: 1.3333rem;
+    font-weight: 400;
   }
 }
 .products {
@@ -713,6 +852,8 @@ ul, ol {
 }
 .abouts .about-content .btn:hover {
   background-color: #46B20F;
+}
+.abouts .about-content .btn:hover a {
   color: #fff;
 }
 

@@ -1,5 +1,13 @@
+ #title {
+    margin-top: 100px;
+    padding: 57px 200px;
+    width: 100%;
+    background-color: #F2FFEC;
+    font-size: 4.333rem;
+    font-weight: 700;
+}
 .greenchop {
-    margin-top: 180px ;
+    margin-top: 100px ;
     .greenchop-content {
         display: flex;
         flex-direction: column;
@@ -94,7 +102,85 @@
         }
     }
 }
+
+.back-greenchop {
+    h2 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .back-greenchop-content {
+        .list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 25px;
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 118px;
+                .text {
+                    width: 50%;
+                    span {
+                        font-size: 1.333rem;
+                        font-weight: 400;
+                        &:first-child {
+                            display: inline-block;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                }
+                .img {
+                    width: 50%;
+                }
+
+            }
+        }
+
+}
+
+}
+.product-greenchop {
+    margin: 100px 0;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.misson {
+    .misson-content {
+        display: flex;
+        align-items: center;
+        gap: 90px;
+        .img {
+            width: 50%;
+
+        }
+        .text {
+            width: 50%;
+            h3 {
+                font-size: 3.2rem;
+                font-weight: 800;
+                margin-bottom: 26.33px;
+            }
+            span {
+                font-size: 1.3333rem;
+                font-weight: 400;
+            }
+
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 991px)  {
+    #title {
+        text-align: center;
+    }
+   
     .greenchop {
         .greenchop-content {
             .list-items {
@@ -113,6 +199,9 @@
     }
 }
 @media screen and (max-width: 767px)  {
+    #title {
+        padding: 40px ;
+    }
     .greenchop {
         .greenchop-content {
             padding: 0 60px;
@@ -120,11 +209,61 @@
             display: flex;
             flex-direction:column ;
             gap: 80px;
+
            }
         }
     }
+    .back-greenchop {
+        .back-greenchop-content {
+            .list-items {
+
+                .item {
+                    gap: 30px;
+                }
+            }
+    
+    }
+    
+    }
 }
 @media screen and (max-width: 575px)  {
+    .back-greenchop {
+        .back-greenchop-content {
+            .list-items {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                margin-top: 25px;
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 60px;
+                    .text {
+                        width: 100%;
+                        span {
+                            font-size: 1.333rem;
+                            font-weight: 400;
+                        }
+                    }
+                    .img {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+    
+                }
+            }
+    
+    }
+    
+    }
+    
     .greenchop {
         .greenchop-content {
             padding: 0 20px;
@@ -136,6 +275,42 @@
                 font-size: 1.2rem;
             }
           
+        }
+    }
+    .product-greenchop {
+        margin: 100px 0;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    .misson {
+        .misson-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 90px;
+            .img {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+            }
+            .text {
+                width: 100%;
+                h3 {
+                    font-size: 3.2rem;
+                    font-weight: 800;
+                    margin-bottom: 26.33px;
+                }
+                span {
+                    font-size: 1.3333rem;
+                    font-weight: 400;
+                }
+    
+            }
         }
     }
 }

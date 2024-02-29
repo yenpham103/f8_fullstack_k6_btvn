@@ -26,6 +26,7 @@
                     a {
                         font-weight: 600;
                         padding-bottom: 43px;
+                        transition: 300ms ease;
                     }
                     &.active {
                         a {
@@ -33,9 +34,9 @@
                             border-bottom: 1.667px solid $primaryColor;
                         }
                     }
-                    &:hover {
-                        @extend .active ;
-                    }
+                    // &:hover {
+                    //     @extend .active ;
+                    // }
                 }
                
             }

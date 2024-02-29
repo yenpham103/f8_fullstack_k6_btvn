@@ -74,7 +74,9 @@
             }
             &:hover {
                 background-color: #46B20F;
-                color: #fff;
+                a {
+                    color: #fff;
+                }
             }
         }
 
