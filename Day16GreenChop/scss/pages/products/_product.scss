@@ -54,6 +54,9 @@
                 font-weight: 700;
                 margin-top: 30px;
                 cursor: pointer;
+                &:hover {
+                    background-color: #FF6916;
+                }
             }
 
         }

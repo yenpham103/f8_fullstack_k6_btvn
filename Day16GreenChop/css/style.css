@@ -265,7 +265,7 @@ ul, ol {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 60px;
+    padding: 0 40px;
   }
   .footer .footer-bot {
     gap: 5px;
@@ -620,6 +620,9 @@ ul, ol {
   margin-top: 30px;
   cursor: pointer;
 }
+.products .list-items .item .btn:hover {
+  background-color: #FF6916;
+}
 
 @media screen and (max-width: 991px) {
   .products {
@@ -707,6 +710,10 @@ ul, ol {
 }
 .abouts .about-content .btn span {
   font-size: 1.4rem;
+}
+.abouts .about-content .btn:hover {
+  background-color: #46B20F;
+  color: #fff;
 }
 
 @media screen and (max-width: 991px) {
@@ -913,6 +920,9 @@ ul, ol {
   font-weight: 700;
   border-radius: 6.667px;
   cursor: pointer;
+}
+.contacts .content .contact-form .form form p:last-child:hover {
+  background-color: #FF6916;
 }
 
 @media screen and (max-width: 991px) {

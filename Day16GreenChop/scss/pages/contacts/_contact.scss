@@ -98,6 +98,9 @@
                             font-weight: 700;
                             border-radius: 6.667px;
                             cursor: pointer;
+                            &:hover {
+                                background-color: #FF6916;
+                            }
                             
                         }
                     }
