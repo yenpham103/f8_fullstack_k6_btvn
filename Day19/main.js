@@ -112,3 +112,9 @@ function convertNumberToWords(number) {
 const number = 6969;
 const words = convertNumberToWords(number);
 console.log(words);
+
+function addToList(item, list) {
+  return list.push(item);
+}
+const result = addToList("apple", [`bana`]);
+console.log(result);

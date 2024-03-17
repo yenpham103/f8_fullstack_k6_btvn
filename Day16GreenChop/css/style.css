@@ -121,7 +121,7 @@ ul, ol {
   opacity: 0;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.98px) {
   .header .logo {
     text-align: center;
   }
@@ -622,9 +622,9 @@ ul, ol {
     padding: 0 60px;
   }
   .greenchop .greenchop-content .list-items {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
   }
   .back-greenchop .back-greenchop-content .list-items .item {
     gap: 30px;
@@ -1535,6 +1535,7 @@ ul, ol {
   height: 149px;
   border-radius: 6.667px;
   border: 0.833px solid #A3A3A3;
+  resize: none;
 }
 .contacts .content .contact-form .form form p:nth-child(3) label textarea::placeholder {
   font-size: 1.6rem;

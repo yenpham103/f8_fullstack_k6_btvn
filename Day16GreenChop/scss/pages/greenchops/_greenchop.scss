@@ -206,9 +206,9 @@
         .greenchop-content {
             padding: 0 60px;
            .list-items {
-            display: flex;
-            flex-direction:column ;
-            gap: 80px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
 
            }
         }
