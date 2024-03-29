@@ -52,7 +52,11 @@ function createCustomers(customers) {
 
   for (let i = 0; i < sortedCustomers.length; i++) {
     const customer = sortedCustomers[i];
-    const shortName = customer.name.split(" ").slice(1).join(" ");
+    const shortName =
+      customer.name.split(" ").slice(0, 1).join(" ") +
+      " " +
+      customer.name.split(" ").slice(2).join(" ");
+    console.log(shortName);
     const newCustomer = createPerson(
       customer.name,
       customer.age,
