@@ -100,7 +100,7 @@ img {
   color: #fff;
 }
 .container-login {
-  width: 50%;
+  width: 100%;
   height: 0;
   display: flex;
   flex-direction: column;
@@ -108,7 +108,7 @@ img {
   justify-content: center;
   visibility: hidden;
   opacity: 0;
-  transition: width 0.2s ease;
+  transition: height 0.3s ease;
 }
 .container-login p {
   font-size: 1.6rem;
@@ -227,11 +227,11 @@ form .btn-submit {
 }
 /* Form Register */
 .container-register {
-  width: 50%;
+  width: 100%;
   height: 0;
   visibility: hidden;
   opacity: 0;
-  transition: width 0.2s ease;
+  transition: height 0.3s ease;
 }
 .container-register .des {
   font-size: 1.6rem;
@@ -260,12 +260,10 @@ form .btn-submit {
 .container-login.active {
   visibility: visible;
   opacity: 1;
-  width: 100%;
-  height: 100%;
+  height: auto;
 }
 .container-register.active {
   visibility: visible;
   opacity: 1;
-  width: 100%;
-  height: 100%;
+  height: auto;
 }
