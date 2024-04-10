@@ -11,19 +11,10 @@ const overlay = document.querySelector(".overlay");
 const containerLogin = document.querySelector(".container-login");
 const containerRegister = document.querySelector(".container-register");
 
-const showPassword = document.querySelector(".show-password");
-const hidePassword = document.querySelector(".hide-password");
-
-//Element form login
+const togglePasswords = document.querySelectorAll(".toggle-password");
 const formLogin = document.querySelector("#form-login");
-let email = document.querySelector("#email");
-let password = document.querySelector("#password");
-
-//form register
 const formRegister = document.querySelector("#form-register");
-let emailRegister = document.querySelector("#email-register");
-let passwordRegister = document.querySelector("#password-register");
-let fullnameRegister = document.querySelector("#fullname-register");
+
 //show modal
 btnShow.addEventListener("click", function (e) {
   e.preventDefault();
@@ -35,6 +26,8 @@ btnShow.addEventListener("click", function (e) {
 function hideModal() {
   boxModal.classList.remove("active");
   overlay.classList.remove("active");
+  resetForm(formRegister);
+  resetForm(formLogin);
 }
 btnClose.addEventListener("click", hideModal);
 overlay.addEventListener("click", hideModal);
@@ -51,6 +44,7 @@ btnLogin.addEventListener("click", function (e) {
   containerRegister.classList.remove("active");
   btnLogin.classList.add("active");
   btnRegister.classList.remove("active");
+  resetForm(formRegister);
 });
 
 //show register
@@ -60,97 +54,156 @@ btnRegister.addEventListener("click", function (e) {
   containerRegister.classList.add("active");
   btnLogin.classList.remove("active");
   btnRegister.classList.add("active");
+  resetForm(formLogin);
 });
 
-//Show and Hide Password
-showPassword.addEventListener("click", function () {
-  password.type = "text";
-  passwordRegister.type = "text";
-  showPassword.classList.remove("active");
-  hidePassword.classList.add("active");
-});
-hidePassword.addEventListener("click", function () {
-  password.type = "password";
-  passwordRegister.type = "password";
-  showPassword.classList.add("active");
-  hidePassword.classList.remove("active");
-});
-//Validate Form
-
-function showError(input, message) {
-  let parent = input.parentElement;
-  let spanMessage = parent.querySelector(".form-message");
-  parent.classList.add("error");
-  spanMessage.innerText = message;
-}
-function showSuccess(input) {
-  let parent = input.parentElement;
-  let spanMessage = parent.querySelector(".form-message");
-  parent.classList.remove("error");
-  spanMessage.innerText = "";
-}
-
-function checkEmptyError(listInput) {
-  listInput.forEach((input) => {
-    input.value = input.value.trim();
-    if (input.value === "") {
-      showError(input, "Vui lòng nhập thông tin");
-    } else {
-      showSuccess(input);
-    }
+//reset form
+function resetForm(form) {
+  form.reset();
+  const groups = form.querySelectorAll(".form-group");
+  groups.forEach((group) => {
+    const span = group.querySelector(".form-message");
+    group.classList.remove("error");
+    span.innerText = "";
   });
 }
+//Show and Hide Password
+function togglePassword(passwords) {
+  passwords.forEach((password) => {
+    const input = password.previousElementSibling;
+    password.addEventListener("click", function () {
+      const icon = password.querySelector("i");
+      if (icon.classList.contains("fa-eye")) {
+        input.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    });
+  });
+}
+togglePassword(togglePasswords);
 
-function checkEmailError(input) {
-  const regexEmail =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-  input.value = input.value.trim();
-  let isEmailError = !regexEmail.test(input.value);
-  if (!isEmailError) {
-    showSuccess(input);
-  } else if (input.value === "") {
-    showError(input, "Vui lòng nhập thông tin");
-  } else {
-    showError(input, "Vui lòng nhập đúng định dạng email");
+//Validator Form
+function Validator(formSelector, options) {
+  if (!options) {
+    options = {};
+  }
+  //
+  function getParent(element, selector) {
+    while (element.parentElement) {
+      if (element.parentElement.matches(selector)) {
+        return element.parentElement;
+      }
+      element = element.parentElement;
+    }
+  }
+
+  let formRules = {};
+  let validatorRules = {
+    required: function (value) {
+      return value ? undefined : "Vui lòng nhập thông tin";
+    },
+    email: function (value) {
+      const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      return regex.test(value)
+        ? undefined
+        : "Vui lòng nhập đúng định dạng email";
+    },
+    min: function (min) {
+      return function (value) {
+        return value.length >= min
+          ? undefined
+          : `Mật khẩu tối thiểu ${min} - 20 ký tự`;
+      };
+    },
+    max: function (max) {
+      return function (value) {
+        return value.length <= max
+          ? undefined
+          : `Mật khẩu tối đa 6 - ${max} ký tự`;
+      };
+    },
+  };
+
+  const formElement = document.querySelector(formSelector);
+  if (formElement) {
+    let inputs = formElement.querySelectorAll("input[name][rules]");
+    for (const input of inputs) {
+      let rules = input.getAttribute("rules").split("|");
+      rules.forEach((rule) => {
+        let ruleInfo;
+        let isRuleHasValue = rule.includes(":");
+
+        if (isRuleHasValue) {
+          ruleInfo = rule.split(":");
+          rule = ruleInfo[0];
+        }
+
+        let ruleFunc = validatorRules[rule];
+
+        if (isRuleHasValue) {
+          ruleFunc = ruleFunc(ruleInfo[1]);
+        }
+
+        if (Array.isArray(formRules[input.name])) {
+          formRules[input.name].push(ruleFunc);
+        } else {
+          formRules[input.name] = [ruleFunc];
+        }
+      });
+      //add event
+      input.onblur = handleValidate;
+      input.oninput = handleClearError;
+    }
+
+    //Ham Validate
+    function handleValidate(e) {
+      let rules = formRules[e.target.name];
+      let errorMessage;
+      for (const rule of rules) {
+        errorMessage = rule(e.target.value);
+        if (errorMessage) break;
+      }
+      if (errorMessage) {
+        let formGroup = getParent(e.target, ".form-group");
+        if (formGroup) {
+          formGroup.classList.add("error");
+          let formMessage = formGroup.querySelector(".form-message");
+          if (formMessage) {
+            formMessage.innerText = errorMessage;
+          }
+        }
+      }
+      return !errorMessage;
+    }
+    //Ham clear error
+    function handleClearError(e) {
+      let formGroup = getParent(e.target, ".form-group");
+      if (formGroup.classList.contains("error")) {
+        formGroup.classList.remove("error");
+        let formMessage = formGroup.querySelector(".form-message");
+        if (formMessage) {
+          formMessage.innerText = "";
+        }
+      }
+    }
+    //handle submit form
+    formElement.onsubmit = function (e) {
+      e.preventDefault();
+      let inputs = formElement.querySelectorAll("input[name][rules]");
+      let isValid = true;
+      inputs.forEach((input) => {
+        if (!handleValidate({ target: input })) {
+          isValid = false;
+        }
+      });
+      if (isValid) {
+        if (typeof options.onSubmit === "function") {
+          return options.onSubmit();
+        }
+      }
+    };
   }
 }
-
-function checkPasswordError(input, min, max) {
-  input.value = input.value.trim();
-  if (input.value === "") {
-    showError(input, "Vui lòng nhập thông tin");
-  } else if (input.value.length < min) {
-    showError(input, `Mật khẩu tối thiểu ${min} - ${max} ký tự`);
-  } else if (input.value.length > max) {
-    showError(input, `Mật khẩu tối thiểu ${min} - ${max} ký tự`);
-  } else {
-    showSuccess(input);
-  }
-}
-
-function checkFullnameError(input) {
-  input.value = input.value.trim();
-  if (input.value === "") {
-    showError(input, "Vui lòng nhập thông tin");
-  } else {
-    showSuccess(input);
-  }
-}
-
-formLogin.addEventListener("submit", function (e) {
-  e.preventDefault();
-  let isEmptyError = checkEmptyError([email, password]);
-  let isEmailError = checkEmailError(email);
-  let isPasswordError = checkPasswordError(password, 6, 20);
-});
-formRegister.addEventListener("submit", function (e) {
-  e.preventDefault();
-  let isEmptyError = checkEmptyError([
-    emailRegister,
-    passwordRegister,
-    fullnameRegister,
-  ]);
-  let isEmailError = checkEmailError(emailRegister);
-  let isPasswordError = checkPasswordError(passwordRegister, 6, 20);
-  let isFullnameError = checkFullnameError(fullnameRegister);
-});
