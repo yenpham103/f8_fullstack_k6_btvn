@@ -29,7 +29,9 @@ function addTodoElement(todo) {
   //Completed
   var pCompleted = li.querySelector("p");
   pCompleted.addEventListener("click", function () {
-    pCompleted.classList.toggle("completed");
+    if (!btnUpdate.classList.contains("active")) {
+      pCompleted.classList.toggle("completed");
+    }
   });
 
   //Delete
