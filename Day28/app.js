@@ -117,7 +117,6 @@ let isDrag = false;
 let initialOffsetX = 0;
 let moveWidth;
 carouselInner.addEventListener("mousedown", function (e) {
-  console.log(e);
   if (e.which === 1) {
     isDrag = true;
     initialOffsetX = e.offsetX;
@@ -132,6 +131,7 @@ carouselInner.addEventListener("mouseup", function (e) {
       currentSlide = 0;
     }
     showSlide(currentSlide);
+    updateActiveDot(currentSlide);
   } else {
     if (Math.abs(moveWidth) > 100 && currentSlide > 0) {
       currentSlide--;
@@ -139,6 +139,7 @@ carouselInner.addEventListener("mouseup", function (e) {
       currentSlide = carouselItems.length - 1;
     }
     showSlide(currentSlide);
+    updateActiveDot(currentSlide);
   }
 });
 carouselInner.addEventListener("mousemove", function (e) {
