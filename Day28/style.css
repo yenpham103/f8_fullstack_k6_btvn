@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+.carousel .carousel-inner {
+  display: flex;
+}
+.carousel .carousel-inner .item {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.4s ease;
+}
+.carousel .carousel-inner .item.active {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+}
+.carousel .carousel-nav span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: gray;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.carousel .carousel-nav span.prev {
+  left: 60px;
+}
+.carousel .carousel-nav span.next {
+  right: 60px;
+}
+
+.carousel .carousel-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  gap: 10px;
+}
+
+.carousel .carousel-dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel .carousel-dots span.active {
+  background: gold;
+}
