@@ -46,7 +46,7 @@ const htmls = `  <div class="carousel">
                                 ? products
                                     .map?.((product, index) => {
                                       return `
-                                      <span data-index="${index}" class=""></span>`;
+                                      <span class=""></span>`;
                                     })
                                     .join(" ")
                                 : "<h2>Không có data trả về</h2>"
@@ -76,6 +76,7 @@ function updateActiveDot(index) {
   });
 }
 dots.forEach((dot, index) => {
+  dots[0].classList.add("active");
   dot.addEventListener("click", function () {
     currentSlide = index;
     showSlide(currentSlide);
