@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .player {
   width: 80%;
   margin: 30px auto;
@@ -51,4 +52,68 @@
   top: -1px;
   translate: 50% 1px;
   border-radius: 100%;
+}
+.karaoke .karaoke-play {
+  background: #863aff;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 0;
+  cursor: pointer;
+}
+.karaoke .karaoke-inner {
+  position: fixed;
+  inset: 0;
+  background: #863aff;
+  color: #fff;
+  padding: 15px;
+  transition: top 0.4s ease;
+  top: 100%;
+}
+.karaoke .karaoke-inner.show {
+  top: 0;
+}
+.karaoke .karaoke-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.4rem;
+}
+.karaoke .karaoke-content {
+  font-size: 1.5rem;
+  height: 80vh;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.karaoke .karaoke-content p {
+  margin: 15px 0;
+  font-size: 1.8rem;
+}
+.karaoke .karaoke-content p span.word {
+  position: relative;
+}
+.karaoke .karaoke-content p span.word span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  overflow: hidden;
+  color: yellow;
+}
+.player.bot {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  z-index: 1;
+  max-width: 80%;
+  margin: 0 auto;
+  color: #fff;
+}
+.player.bot .progress span {
+  background: #fff;
 }
