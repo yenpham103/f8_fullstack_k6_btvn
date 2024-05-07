@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, serif;
+  font-size: 62.5%;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.list-item {
+  width: 550px;
+  border: 15px solid #4286f4;
+  background: #8bb3f4;
+}
+.list-item .item {
+  padding: 10px;
+  border: 1px solid #fff;
+  color: #333;
+  font-size: 1.2rem;
+  background: #8bb3f4;
+  margin: 1px 0;
+}
+.list-item .item.module {
+  background: #ff6f00;
+}
+.list-item .item.dragging {
+  opacity: 0;
+}
