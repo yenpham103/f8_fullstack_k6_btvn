@@ -34,7 +34,6 @@ items.forEach((item) => {
   });
   item.addEventListener("dragend", function () {
     item.classList.remove("dragging");
-    updateItemOrder();
   });
 });
 
@@ -62,12 +61,19 @@ const initSortableList = function (e) {
   } else {
     listItem.insertBefore(draggingItem, nextSibling);
   }
-
-  updateItemOrder();
 };
 
+function autoUpdateNumber() {
+  const spanELs = document.querySelectorAll(".item:not(.module) span");
+  spanELs.forEach((span, index) => (span.innerText = `Bài ${index + 1}: `));
+
+  const spanModuleEls = document.querySelectorAll(".item.module span");
+  spanModuleEls.forEach(
+    (span, index) => (span.innerText = `Module ${index + 1}: `)
+  );
+}
 listItem.addEventListener("dragover", initSortableList);
 listItem.addEventListener("dragend", function (e) {
   e.preventDefault();
-  updateItemOrder();
+  autoUpdateNumber();
 });
