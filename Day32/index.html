@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h2>Doc Editor</h2>
+            <hr style="margin: 20px 0;" />
+            <div class="controls">
+                <div class="control-right">
+                    <div class="dropdown">
+                        <button class="btn btn-file dropdown-toggle" data-bs-toggle="dropdown">
+                            File
+                            <i class="fa-solid fa-sort-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button id="new-btn" class="dropdown-item">New</button>
+                            <button id="txt-btn" class="dropdown-item">Save as TXT</button>
+                            <button id="pdf-btn" class="dropdown-item">Save as PDF</button>
+                        </div>
+                    </div>
+                    <input type="text" id="filename-input" value="untitled">
+                </div>
+                <div class="control-left">
+                    <button class="btn btn-b">b</button>
+                    <button class="btn btn-u">u</button>
+                    <button class="btn btn-i">i</button>
+                    <input type="color" class="control-color">
+                </div>
+            </div>
+            <div id="content" contenteditable="true" spellcheck="false">
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

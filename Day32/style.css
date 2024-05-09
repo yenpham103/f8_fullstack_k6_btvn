@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Roboto, sans-serif !important;
+  font-size: 1.6rem;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn-file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 10px 10px;
+  background: #0d6efd;
+  color: #fff;
+}
+.btn-file i {
+  padding-bottom: 8px;
+}
+.control-right {
+  position: relative;
+}
+.controls .control-right,
+.controls .control-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.control-right input {
+  border: 1px solid #33333387;
+  outline: none;
+  padding: 12px 10px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+}
+.control-right .dropdown .dropdown-menu {
+  display: none;
+  gap: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  transform: translate(0, 45px);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+.control-right .dropdown .dropdown-menu .dropdown-item {
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 5px 50px 5px 10px;
+  text-align: start;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.control-right .dropdown .dropdown-menu.active {
+  display: flex;
+}
+.control-right .dropdown .dropdown-menu .dropdown-item:hover {
+  background: #3333332b;
+}
+.control-right input:focus {
+  border: 1px solid #0d6efd;
+}
+.control-left button {
+  background: black;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.control-left .btn-b {
+  font-weight: 700;
+}
+.control-left .btn-u {
+  text-decoration: underline;
+  font-weight: 500;
+}
+.control-left .btn-i {
+  font-weight: 500;
+  font-style: italic;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.control-left .btn.active {
+  background: #0d6efd;
+  color: #fff;
+}
+.control-left input {
+  height: 85%;
+  width: 50px;
+  padding: 0;
+  cursor: pointer;
+}
+
+#content {
+  padding: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+  outline: none;
+  min-height: 300px;
+}
