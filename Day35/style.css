@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto;
+}
+.container h1 {
+  font-size: 3.6rem;
+  color: #111827;
+  text-align: center;
+}
+.container h1 span {
+  color: #059669;
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.content .handle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.content .handle .search-task {
+  width: 500px;
+  position: relative;
+}
+.content .handle .search-task .search {
+  width: 100%;
+  height: 55px;
+  padding: 10px 20px;
+  border: 1px solid #33333371;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.6rem;
+  color: #111827;
+  font-weight: 400;
+  background: transparent;
+}
+.content .handle .search-task .search::placeholder {
+  color: #11182764;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.content .handle .search-task button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-10px, 10px);
+}
+.content .handle .search-task button:hover {
+  opacity: 0.8;
+}
+.content .handle .search-task button i {
+  font-size: 1.4rem;
+}
+.content .handle .btn-add-todo {
+  border: none;
+  outline: none;
+  padding: 5px 16px;
+  color: #fff;
+  background: #065f46;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 45px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.content .handle .btn-add-todo:hover {
+  opacity: 0.8;
+}
+.content .list-todo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content .list-todo .todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+.content .list-todo .content-todo {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.content .list-todo .list-btn {
+  display: flex;
+  gap: 8px;
+}
+.content .list-todo .list-btn button {
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+.content .list-todo .list-btn .delete {
+  background: #be123c;
+}
+.content .list-todo .list-btn .edit {
+  background: #1d4ed8;
+}
+.content .list-todo .list-btn .save {
+  background: #33333373;
+}
+.content .list-todo .list-btn button:hover {
+  opacity: 0.8;
+}
+.content .list-todo .list-btn .save:hover {
+  background: #047857;
+}
+.completed {
+  display: inline-flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+  padding: 12px;
+  width: 200px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #333;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.completed:hover {
+  opacity: 0.9;
+}
+
+.add-todo #form {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.add-todo #form label {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  align-content: center;
+  justify-content: center;
+  padding: 24px;
+}
+.add-todo #form .input {
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+.add-todo #form .input::placeholder {
+  font-size: 1.6rem;
+}
+.add-todo #form .add-todo-btn {
+  border-top: 1px solid #e5e7eb;
+}
+.add-todo #form .add-todo-btn button {
+  padding: 12px 20px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+}
+.add-todo #form .add-todo-btn button:first-child {
+  background: #047857;
+  color: #fff;
+  border: none;
+}
+.add-todo #form .add-todo-btn button:hover {
+  opacity: 0.8;
+}
+.add-todo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 10;
+  border-radius: 8px;
+  display: none;
+}
+.add-todo.active {
+  display: block;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(55, 65, 81, 0.6);
+  display: none;
+}
+.overlay.active {
+  display: block;
+}
+.content .list-todo-completed {
+  display: none;
+}
+.content .list-todo-completed.active {
+  display: flex;
+}
+.completed.active {
+  background: #065f46;
+  border: 1px solid #60a5fa;
+  opacity: 1;
+}

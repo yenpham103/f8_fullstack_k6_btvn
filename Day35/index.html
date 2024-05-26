@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main id="root">
+        <div class="container">
+            <div class="content">
+                <h1><span>Smatyx</span> Todos App</h1>
+                <div class="handle">
+                    <div class="search-task">
+                        <input type="search" name="search" class="search" placeholder="Search Todos">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <button class="btn-add-todo">Add Todos</button>
+                </div>
+                <div class="list-todo list-todo-main">
+
+                </div>
+                <button class="completed">
+                    <span class="completed-text">Completed Todos <span class="count">1</span></span>
+                    <span class="completed-icon">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <!-- <i class="fa-solid fa-circle-arrow-down"></i> -->
+                    </span>
+                </button>
+                <div class="list-todo list-todo-completed">
+
+                </div>
+            </div>
+            <div class="add-todo">
+                <form id="form" method="post">
+                    <label>
+                        <input class="input" type="text" name="name" placeholder="Add Todos" required>
+                    </label>
+                    <label class="add-todo-btn">
+                        <button type="submit" class="btn-save">Save</button>
+                        <button type="button" class="btn-cancel">Cancel</button>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </main>
+
+
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
