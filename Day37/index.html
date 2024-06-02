@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="start-btn">
+        <button>Start Quiz</button>
+    </div>
+    <div class="info-box">
+        <div class="rules">
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="info-list">
+            <div class="info">1.You will have only <span>15 seconds</span> per each question</div>
+            <div class="info">2.Once you select your answer, you can't reselect</div>
+            <div class="info">3.You can't select any option once time goes off</div>
+            <div class="info">4.You can't exit from the Quizz while you're playing</div>
+            <div class="info">5.You'll get points on the basis of your correct answers</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="quiz-box">
+        <header>
+            <div class="title">Chiến thôi nhỉ anh em 🐧</div>
+            <div class="timer">
+                <div class="time-text">Time Left</div>
+                <div class="time-sec">15</div>
+            </div>
+            <div class="time-line"></div>
+        </header>
+        <section>
+            <!-- <div class="que-text">
+                <span>Bác Hồ sinh năm bao nhiêu?</span>
+            </div>
+            <div class="option-list">
+                <div class="option">
+                    <span>19-5-1890</span>
+                    <div class="icon tick">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>
+                <div class="option ">
+                    <span>19-5-1880</span>
+                    <div class="icon cross">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="option ">
+                    <span>19-5-1969</span>
+                    <div class="icon cross">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="option ">
+                    <span>19-5-1980</span>
+                    <div class="icon cross">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+        <footer>
+            <div class="total-que">
+                <span>
+                    <p>1</p>of<p>5</p>Questions
+                </span>
+            </div>
+            <button class="next-btn">Next Questions</button>
+        </footer>
+    </div>
+
+    <div class="result-box">
+        <h2>Game performance</h2>
+        <div class="accuracy-box">
+            <p class="accurary-text">Accuracy</p>
+            <div class="accuracy-per">
+                <div class="win">
+                    <span>85.5%</span>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="score item">
+                <span class="number score-text">100</span>
+                <span class="text">Score</span>
+            </div>
+            <div class="streak item">
+                <span class="number">100</span>
+                <span class="text">Streak</span>
+            </div>
+            <div class="correct item">
+                <span class="number">100</span>
+                <span class="text">Correct</span>
+            </div>
+            <div class="incorrect item">
+                <span class="number">100</span>
+                <span class="text">Incorrect</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+
+
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
