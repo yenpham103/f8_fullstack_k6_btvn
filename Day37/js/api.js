@@ -1,3 +1,3 @@
 export const api = {
-  SERVER_QUESTIONS_API: "http://localhost:3000",
+  SERVER_QUESTIONS_API: "https://fsgrl6-8080.csb.app",
 };
